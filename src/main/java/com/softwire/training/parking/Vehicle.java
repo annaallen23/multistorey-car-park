@@ -2,28 +2,32 @@ package com.softwire.training.parking;
 
 public class Vehicle {
 
+    private String registration;
+    private double height;
+    private double width;
+    private Type type;
+
     public Vehicle(Type type, String registration, double height, double width) {
-        // TODO - replace this!
+        this.registration = registration;
+        this.height = height;
+        this.width = width;
+        this.type = type;
     }
 
     public Type getType() {
-        // TODO - replace this!
-        return null;
+        return type;
     }
 
     public String getRegistration() {
-        // TODO - replace this!
-        return null;
+        return registration;
     }
 
     public double getHeight() {
-        // TODO - replace this!
-        return 0.0;
+        return height;
     }
 
     public double getWidth() {
-        // TODO - replace this!
-        return 0.0;
+        return width;
     }
 
     public enum Type {
