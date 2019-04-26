@@ -30,7 +30,13 @@ public class MultiStorey {
     }
 
     public ParkingSpace getSpaceContainingVehicleWithRegistration(String registration) {
-        // TODO - replace this!
+        for (Floor floor :multiStoreyFloors) {
+            for (ParkingSpace parkingSpace : floor.getParkingSpaces()){
+                if (parkingSpace.isOccupied() && parkingSpace.getParkedVehicle().getRegistration().equals(registration)) {
+                    return parkingSpace;
+                }
+            }
+        }
         return null;
     }
 }
